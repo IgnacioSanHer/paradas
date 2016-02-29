@@ -1,0 +1,36 @@
+<html>
+<head>
+<style>
+#caja{
+	width:50%;
+	text-align:center;
+	background-color: blue;
+	border-style: solid;
+	border-radius: 3%;
+}
+body{
+	background-image: url("EMT.jpg");
+	background-repeat:no-repeat;
+	background-size: 100%;
+}
+</style>
+<script src="javascript/jquery-1.11.1.js"></script>
+<script src="javascript/funciones.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+<title> TIEMPO ESPERA </title>
+</head>
+<body>
+<form action="https://openbus.emtmadrid.es:9443/emt-proxy-server/last/geo/GetStopsFromXY.php" method="post">
+<div id="caja">
+<input type="hidden" name="idClient" value="WEB.SERV.xete.16312@gmail.com" id="idcliente"> </p>
+<input type="hidden" name="passKey" value="D8A51374-5B0E-4089-B17A-0ACB4AA511A5" id="passkey"> </p>
+<h1>PARADAS DE AUTOBUS MADRID<h2>
+<p>Para saber el tiempo de espera introduzca el numero de la parada.</p>
+<b>NUMERO DE PARADA:</b>
+<input type="text" name="idStop" value="" id="idparada"> </p>
+<input type="button" value="BUSCAR" onClick="javascript:enviar();"> <p>
+<input type="hidden" id="es" value="ES" name="cultureInfo"><p>
+</div>
+</form>	
+</body>
+</html>
